@@ -1,0 +1,639 @@
+* {margin: 0;
+    padding: 0; 
+ box-sizing: border-box;}
+ 
+html {font-size: 10px;}
+
+$colorTitulos: darkolivegreen;
+$colorTitulosSecundarios:  #644835;
+$fuenteTitulos: 'Anton', sans-serif;
+$fuenteTitulosSecundarios: 'Josefin Sans', sans-serif;
+$ColorDeFondoBody:  #8ABD57;
+$ColorFondoCajas: white;
+
+
+
+
+
+/*NUEVA CABECERA*/
+
+
+li {list-style: none;}
+
+header {background: #877E50;
+        padding: 1.5rem 0;
+        width: 100%;
+        
+        
+        
+        
+
+div {width: 90%;
+max-width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+   
+    h1 {color: white;
+font-size: 2.5rem;
+text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);
+color: rgb(255, 255, 255);
+
+}
+
+
+
+    }
+    ul {display: flex;}  
+  
+    li {margin-left: 1rem;}
+    a {color: yellow;
+    font-size: 1.5rem;
+text-transform: uppercase;
+text-decoration: none;}
+}
+    
+
+    
+
+
+
+.icon {display: none;}
+
+@media screen and (max-width: 768px) {
+    
+nav {
+position: fixed;
+left: 0;
+top: -110%;
+width: 100%;
+height: 100vh;
+background: #877E50;
+transition: top 0.8s;
+
+}
+
+#menus:target {
+    top: 0;
+}
+
+.icon {
+    display: block;
+    filter: invert(100%);
+    width: 3rem;
+}
+
+.close {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;        
+}
+
+ul {width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+li {margin: 2rem 0;
+    }
+
+a {font-size: 3rem;}
+
+.inicio__texto {font-size: 1rem;}
+.inicio__containerindex {max-width: 70%;}
+.inicio__containernoticias {max-width: 70%;}
+.inicio__containervideos {max-width: 70%;}
+.inicio__containercolabora {max-width: 70%;}
+}
+
+
+/*BODY*/
+body { 
+    background-image: url(../fondos/bambu.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    }
+    
+    
+
+ /*ETIQUETAS H*/
+h1  {text-align: center;
+        color: $colorTitulos;
+        font-family: $fuenteTitulos;
+    padding: 20px;}
+    
+h2 {text-align: center;
+        color: $colorTitulosSecundarios;
+        font-family: $fuenteTitulosSecundarios;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 100px;}
+    
+    
+    
+
+    
+/*HEATHER
+#cabecera {
+        background-color: #4F7352;}
+
+.contenedor1 {display: flex;
+    justify-content: space-between;}
+    
+    /*TODO LO QUE ESTA EN EL NAV
+
+
+
+    nav {
+        
+        padding: 20px;
+        margin: 15px;
+        text-align: right;
+         font-size: 20px;
+    
+    ul li:hover {background-color: rgb(247, 247, 21);
+                font-size: 25px;}
+    li {
+        
+        text-decoration: none;
+        font-size: 28px;
+        color: $fuenteTitulos;
+        border: solid darkolivegreen 2px;
+        background-color: #8ABD57;
+        display: inline-block;
+        text-transform: uppercase;   
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+     }
+    
+
+    .contenedor1__menu {
+        color: $colorTitulos;
+        text-decoration: none;}
+     
+
+    
+    /*INDEX*/
+       
+    /*FOTOS INDEX*/
+ .inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        align-items: center;
+    
+        .inicio__containerindex {
+        width: 500px;
+        height: 300px;
+        background-image: url("../animales/ciervoportada.jpg");
+        background-size: cover;
+        margin: 1em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 0 10px #fff,
+                    0 0 0 11px #ccc,
+                    0 20px 20px -12px #000;   
+                                                }           
+    
+    
+        .inicio__texto {
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(62, 105, 52, 0.452);
+        background-size: cover;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        box-sizing: border-box;
+        position: relative;
+        transition: all .3s;
+        top: 100%;
+        text-decoration: none;
+    }
+    
+    &:hover .inicio__texto .inicio {top: 0;}
+    }
+
+    /*VIDEOS INDEX*/
+    
+.inicio__containervideos {
+        width: 500px;
+        height: 300px;
+        background-image: url("../animales/portadavideos.jpg");
+        background-size: cover;
+        margin: 1em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 0 10px #fff,
+                    0 0 0 11px #ccc,
+                    0 20px 20px -12px #000;   
+    
+    
+        &:hover .texto {top: 0;}
+        }
+
+    /*NOTICIAS INDEX*/
+    
+    .inicio__containernoticias {
+        width: 500px;
+        height: 300px;
+        background-image: url("../animales/noticiasportada.jpg");
+        background-size: cover;
+        margin: 1em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 0 10px #fff,
+                    0 0 0 11px #ccc,
+                    0 20px 20px -12px #000;   
+    
+    
+        .inicio__containernoticias:hover .texto {top: 0;}
+        }
+    /*COLABORA INDEX*/
+    
+    .inicio__containercolabora {
+        width: 500px;
+        height: 300px;
+        background-image: url("../animales/colaboraportada.jpg");
+        background-size: cover;
+        margin: 1em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 0 10px #fff,
+                    0 0 0 11px #ccc,
+                    0 20px 20px -12px #000;   
+    
+    
+        .inicio__containercolabora:hover .texto {top: 0;}
+    }
+    
+
+
+
+
+    /*MODIFICACIONES QUE HICE PORQUE BOOSTRAP LE SEGUIA DANDO SU ESTILO*/
+    a { color: $fuenteTitulos;
+        text-decoration: none;}
+    
+    a:hover {
+        text-decoration: none;
+        color: rgb(106, 192, 72);}
+
+    .inicio__containerindex:hover .inicio__texto {
+        top: 0;
+        color: white;
+        font-weight: bold;}
+    
+    .inicio__containervideos:hover .inicio__texto {
+        top: 0;
+        color: white;
+        font-weight: bold;}
+    
+    .inicio__containercolabora:hover .inicio__texto {
+        top: 0;
+        color: white;
+        font-weight: bold;}
+    
+    .inicio__containernoticias:hover .inicio__texto {
+        top: 0;
+        color: white;
+        font-weight: bold;}
+    
+    
+    /*CAROUSEL BOOSTRAP*/
+    
+    .textorojo {
+        text-align: center
+        color white;
+        background-color: red;
+        border-radius: 10px;
+        border: solid white;
+        padding: 15px;
+    
+    
+        h1 {color: white;}
+    }
+
+    .contenedorrojo {
+        margin-top: 100px;
+    
+        .container {border: red 10px;}
+    
+        h5 {background-color: rgba(0, 0, 0, 0.486);
+    }
+    }
+    
+   
+    /*BOTON QUE ESTA EN EL INDEX Y EN FOTOS*/
+    #menu2 {
+        float: right;
+        padding: 10px;
+        border: solid  darkgreen 5px;  
+        background-color: #877E50;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: darkgreen;
+        font-family: 'Anton', sans-serif;
+    font-weight: 400;
+        
+    
+    &:hover {
+        font-size: 220%;
+        cursor: pointer;}
+    
+    }
+    /*FOOTER*/
+    .pie {
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 20px;}
+        
+    footer {
+        margin-top: 200px;
+        text-align: center;
+        font-size: 2em;
+        background-color: #644835;
+        color: white;
+        }
+    
+ 
+    
+    /*FOTOS.HTML*/
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        img {width: 100%;}
+    }
+    
+    .contenedor2 {
+        display: flex;
+        justify-content: center;}
+    
+    .fotorecuadro {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;}
+    
+    
+    /*VIDEOS.HTML*/
+    
+    .videos {
+        background-color: whitesmoke;
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+        border: solid black;
+        margin: 20px;
+    
+    
+        h2 {
+        text-align: center;
+        padding: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+        p {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 22px;
+        margin: 3px;
+    }
+        iframe {margin-left: 70px;}
+    
+        &:hover {background-color: yellow;}
+    }
+
+    .videosflex {display: flex;}
+    
+    
+    /*FOTOS.HTML*/
+    .fotosok {
+        background-color: whitesmoke;
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+        border: solid black;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    justify-content: center;
+    
+        p {text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 22px;
+        margin: 3px;
+        }
+    
+        h2 {text-align: center;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            }
+    
+        img {
+            border: solid black 2px;
+            box-sizing: content-box;
+            max-height: 50%;
+    
+    
+    
+    }
+    
+        &:hover {background-color: yellow;}
+    }
+
+    .fotosok:hover  h2 {font-size: 30px;}
+    
+    .fotosconflex {
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+    
+    
+    
+    
+    
+    
+    /*NOTICIAS.HTML*/
+    .noticias {
+        background-color: whitesmoke;
+        background-color: whitesmoke;
+        width: 70%;
+        height: 500px;
+        border-radius: 10px;
+        border: solid black;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        p {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 22px;
+        margin: 3px;
+        }
+    
+        h2 {
+        text-align: center;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        }
+    
+        &:hover {background-color: yellow;}
+        &:hover  h2 {font-size: 30px;}
+    }
+
+
+    .padrenoticia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        h2 {text-align: center;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        }
+    
+       &:hover {background-color: rgba(6, 90, 17, 0.315);}
+    }
+    
+    
+    /*GALERIA CON GRID*/
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20% 20% 20%;
+        gap: 10px 10px;
+        grid-template-areas:
+          "img2 img2 img1 img1"
+          "img3 img3 img1 img1"
+          "img4 img4 img5 img6";
+      }
+      .img1 { grid-area: img1; }
+      .img2 { grid-area: img2; }
+      .img3 { grid-area: img3; }
+      .img4 { grid-area: img4; }
+      .img5 { grid-area: img5; }
+      .img6 { grid-area: img6; }
+    
+    .grid-container img {width: 100%;
+        height: 100%;
+        object-fit: cover;}
+    
+    .galerias { float: center;
+        padding: 10px;
+        border: solid  darkgreen 5px;  
+        background-color: #877E50;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: darkgreen;
+        font-family: 'Anton', sans-serif;
+        font-weight: 400;
+        margin-left: 45%;
+        margin-bottom: 10%;
+        margin-top: 10%;}
+    
+    
+    
+    /*FORMULARIO CON BOOSTRAP*/
+    
+    .container {
+        background-color: rgba(172, 138, 44, 0.151);
+        border-radius: 10px;
+        border: solid yellow;
+        padding: 15px;
+    }
+
+      
+    
+    /*FORMULARIO*/
+    #formulario {
+        padding: 20px;
+        text-align: center;
+        margin: 10%;
+        border: solid #7A3737 2px;
+    }
+    
+    
+    /*Noticias buenas*/
+    .noticiaBuena {
+    width: 70%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 1.0);  
+    margin: 20px;
+    background-color: $ColorFondoCajas;
+    
+    }
+
+   
+   .noticiaBuena__titulo {
+       @extend h1;
+   }
+
+   .noticiaBuena__contenedorFoto {
+       @extend  .inicio
+   }
+
+   .noticiaBuena__contenedorFoto {
+    width: 90%;
+    background-size: cover;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff,
+                0 0 0 11px #ccc,
+                0 20px 20px -12px #000;
+    margin-bottom: 45px;
+   }
+           
+
+   .noticiaBuena__texto {
+       @extend .inicio__texto;
+       background-color: rgba(151, 149, 149, 0.404);
+       justify-content: center;
+       margin-top: 50px;
+       padding: 2em;
+       font-weight: bold;
+    }
+
+  
+.centrarNoticia {
+    @extend .inicio
+}
